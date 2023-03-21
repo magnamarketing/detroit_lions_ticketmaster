@@ -49,7 +49,7 @@ let timerVar = setInterval(() => {
                     singleLine: {
                         Product: {
                             _id: '$event_id$',
-                            price: '$ticket_price$',
+                            price: 100,
                             quantity: 1
                         }
                     }
