@@ -10,11 +10,23 @@ let timerVar = setInterval(() => {
                 pageTypeDefault: {
                     name: "TicketmasterDefault",
                 },
-                pageTypes: [{
-                    name: "TM Account Manager Landing Pages",
-                    action: "TM Account Manager Landing Pages",
-                    isMatch: () => true,
-                }]
+                pageTypes: [
+                    {
+                        name: "TM Account Manager Virtual Venue Page",
+                        action: "TM Account Manager Virtual Venue Page",
+                        isMatch: () => /detroitlions\/virtual-venue/.test(window.location.href)
+                    },
+                    {
+                        name: "TM Account Manager 2023 Deposits Page",
+                        action: "TM Account Manager 2023 Deposits Page",
+                        isMatch: () => /detroitlions\/2023deposit/.test(window.location.href)
+                    },
+                    {
+                        name: "TM Account Manager Landing Pages",
+                        action: "TM Account Manager Landing Pages",
+                        isMatch: () => true
+                    }
+                ]
             });   // Initializes the Sitemap
         });
 
